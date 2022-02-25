@@ -1,3 +1,4 @@
+import 'package:anime_mage/globalConstants/color_palatte.dart';
 import 'package:anime_mage/globalConstants/constants.dart';
 import 'package:anime_mage/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -16,12 +17,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Anime Mage',
       theme: ThemeData(
-        primaryColor: appPrimayColor,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: appTextColor),
-        primarySwatch: Colors.green,
-      ),
+          // primaryColor: appPrimayColor,
+          textTheme: Theme.of(context).textTheme.apply(bodyColor: appTextColor),
+          primarySwatch: Colors.green
+          ),
       home: HomeScreen(),
     );
   }
 }
-
