@@ -24,21 +24,44 @@ class AppBody extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-                left: appDefaultPadding, top: appDefaultPadding / 2,
+                left: appDefaultPadding,
+                top: appDefaultPadding / 2,
+                // right: appDefaultPadding * 2,
                 bottom: appDefaultPadding * 2.5),
             width: size.width * 0.3,
             child: Column(
               children: [
                 Image.asset("assests/images/eren-yeager-full-size.png"),
                 Container(
-                  padding: EdgeInsets.all(appDefaultPadding / 2),
-                  decoration:
-                      BoxDecoration(color: Colors.transparent, boxShadow: [
+                  padding: EdgeInsets.only(right: 5),
+                  decoration: BoxDecoration(color: Colors.white, boxShadow: [
                     BoxShadow(
                         offset: Offset(0, 10),
                         blurRadius: 50,
-                        color: appPrimayColor.withOpacity(0.7))
+                        color: appPrimayColor.withOpacity(0.25))
                   ]),
+                  child: Row(
+                    children: [
+                      RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                            text: "Eren Yeager\n",
+                            style: Theme.of(context).textTheme.button),
+                        TextSpan(
+                            text: "Attack On Titan",
+                            style: TextStyle(
+                                color: appPrimayColor.withOpacity(0.5)))
+                      ])),
+                      Spacer(),
+                      Text(
+                        'SR',
+                        style: Theme.of(context)
+                            .textTheme
+                            .button
+                            ?.copyWith(color: appPrimayColor),
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
