@@ -19,12 +19,32 @@ class AppBody extends StatelessWidget {
         children: [
           HeaderSearchBox(size: size),
           TitleWithButton(
-            title: 'Trending',
+            title: 'Trending Characters',
             press: () {},
+          ),
+          Container(
+            margin: EdgeInsets.only(
+                left: appDefaultPadding, top: appDefaultPadding / 2,
+                bottom: appDefaultPadding * 2.5),
+            width: size.width * 0.3,
+            child: Column(
+              children: [
+                Image.asset("assests/images/eren-yeager-full-size.png"),
+                Container(
+                  padding: EdgeInsets.all(appDefaultPadding / 2),
+                  decoration:
+                      BoxDecoration(color: Colors.transparent, boxShadow: [
+                    BoxShadow(
+                        offset: Offset(0, 10),
+                        blurRadius: 50,
+                        color: appPrimayColor.withOpacity(0.7))
+                  ]),
+                )
+              ],
+            ),
           )
         ],
       ),
     );
   }
 }
-
