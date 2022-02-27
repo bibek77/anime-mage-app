@@ -1,9 +1,6 @@
 import 'package:anime_mage/globalConstants/constants.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
+import 'package:anime_mage/screens/details_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class MainCharacters extends StatelessWidget {
   const MainCharacters({
@@ -21,35 +18,50 @@ class MainCharacters extends StatelessWidget {
             character: "Eren Yeager",
             anime: "Attack On Titan",
             rating: "SR",
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
           ),
           TrendingCharactersCards(
             image: "assests/images/characters/naruto-full-size.png",
             character: "Naruto",
             anime: "Naruto",
             rating: "SSR",
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
           ),
           TrendingCharactersCards(
             image: "assests/images/characters/hatake-kakashi-full-size.png",
             character: "Kakashi",
             anime: "Naruto",
             rating: "R",
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
           ),
           TrendingCharactersCards(
             image: "assests/images/characters/tanjiro-full-size.png",
             character: "Tanjiro",
-            anime: "Demon",
+            anime: "Demon Slayer",
             rating: "R",
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
           ),
           TrendingCharactersCards(
             image: "assests/images/characters/zenitsu-full-size.png",
             character: "Zenitsu",
             anime: "Demon Slayer",
             rating: "R",
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
           ),
         ],
       ),
