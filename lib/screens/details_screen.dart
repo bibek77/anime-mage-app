@@ -1,3 +1,4 @@
+import 'package:anime_mage/screens/pages/details_page_body.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -5,7 +6,8 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+      body: DetailsPageBody(),
       
     );
   }
