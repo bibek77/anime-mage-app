@@ -1,8 +1,7 @@
 import 'package:anime_mage/globalConstants/constants.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'details_icon_card.dart';
+import 'details_image_icons.dart';
+import 'details_title_anime.dart';
 
 class DetailsPageBody extends StatelessWidget {
   const DetailsPageBody({Key? key}) : super(key: key);
@@ -13,61 +12,40 @@ class DetailsPageBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
+          ImageAndIcons(size: size),
+          TitleAndRating(
+            character: "Eren Yeager",
+            anime: "Attack On Titan",
+            rating: "SR",
+          ),
           SizedBox(
-            height: size.height * 0.8,
-            child: Row(
-              children: [
-                Expanded(
-                    child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: appDefaultPadding * 3),
-                  child: Column(
-                    children: [
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: IconButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            icon: Icon(CupertinoIcons.arrow_left)),
-                      ),
-                      Spacer(),
-                      IconCard(
-                          icon: Icon(CupertinoIcons.moon, color: appPrimayColor)),
-                      IconCard(
-                          icon:
-                              Icon(CupertinoIcons.camera, color: appPrimayColor)),
-                      IconCard(
-                          icon: Icon(CupertinoIcons.cloud_download,
-                              color: appPrimayColor)),
-                      IconCard(
-                          icon: Icon(CupertinoIcons.bell, color: appPrimayColor))
-                    ],
+            height: appDefaultPadding,
+          ),
+          Row(children: [
+            SizedBox(
+              width: size.width / 2,
+              height: 84,
+              child: ElevatedButton(
+                child: Text(
+                  "Details",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
                   ),
-                )),
-                Container(
-                  height: size.height * 0.8,
-                  width: size.width * 0.75,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(63),
-                        topRight: Radius.circular(63),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                            offset: Offset(0, 10),
-                            blurRadius: 60,
-                            color: appPrimayColor.withOpacity(0.49))
-                      ],
-                      image: DecorationImage(
-                          alignment: Alignment.centerLeft,
-                          fit: BoxFit.cover,
-                          image: AssetImage(
-                              "assests/images/characters/eren-yeager-full-size.png"))),
-                )
-              ],
+                ),
+                onPressed: () {},
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(appPrimayColor),
+                ),
+              ),
             ),
-          )
+            Expanded(
+                child: TextButton(
+              child: Text("Related"),
+              onPressed: (){},
+            ))
+          ]),
+          SizedBox(height: appDefaultPadding * 2,)
         ],
       ),
     );
