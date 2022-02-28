@@ -1,4 +1,5 @@
 import 'package:anime_mage/components/body.dart';
+import 'package:anime_mage/components/drawer.dart';
 import 'package:anime_mage/globalConstants/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MyDrawer(),
       appBar: buildAppBar(),
       body: AppBody(),
       bottomNavigationBar: BottomNavigation(),
@@ -20,10 +22,11 @@ class HomeScreen extends StatelessWidget {
   AppBar buildAppBar() {
     return AppBar(
       elevation: 0,
-      leading: IconButton(
-        icon: Icon(CupertinoIcons.bars),
-        onPressed: () {},
-      ),
+      // leading: IconButton(
+      //   icon: Icon(CupertinoIcons.bars),
+      //   onPressed: () {
+      //   },
+      // ),
     );
   }
 }
