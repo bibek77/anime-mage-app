@@ -26,15 +26,18 @@ class BottomNavigation extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {},
-            icon: Icon(CupertinoIcons.star),
+            icon: Icon(CupertinoIcons.home,
+            color: appPrimayColor),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(CupertinoIcons.heart),
+            icon: Icon(CupertinoIcons.search,
+            color: appPrimayColor),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(CupertinoIcons.person),
+            icon: Icon(CupertinoIcons.person,
+            color: appPrimayColor),
           )
         ],
       ),
