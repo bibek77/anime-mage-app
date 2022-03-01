@@ -1,10 +1,7 @@
+import 'package:anime_mage/utils/themes.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:velocity_x/velocity_x.dart';
 import 'package:anime_mage/globalConstants/constants.dart';
-import 'package:anime_mage/main.dart';
 
 class HeaderSearchBox extends StatelessWidget {
   const HeaderSearchBox({
@@ -28,7 +25,7 @@ class HeaderSearchBox extends StatelessWidget {
                 bottom: 30 + appDefaultPadding),
             height: size.height * 0.2 - 55,
             decoration: BoxDecoration(
-                color: Colors.green,
+                color: MyTheme.primaryAppColor,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(36),
                   bottomRight: Radius.circular(36),
@@ -69,8 +66,7 @@ class HeaderSearchBox extends StatelessWidget {
                       BoxShadow(
                           offset: Offset(0, 10),
                           blurRadius: 50,
-                          color: Color.fromARGB(255, 42, 110, 44)
-                              .withOpacity(0.43))
+                          color: MyTheme.primaryAppColor)
                     ]),
                 child: TextField(
                   decoration: InputDecoration(
